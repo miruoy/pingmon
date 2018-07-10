@@ -1,5 +1,5 @@
 #!/bin/bash
-OUTPUTDIR="./output"
+OUTPUTDIR="./pingmon_outputdir"
 INPUTFILE="./ping.destinations"
 PINGCOUNTS="-c 1"
 PINGOPTS="-n -D"
