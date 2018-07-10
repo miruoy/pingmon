@@ -1,6 +1,12 @@
 #!/bin/bash
+OUTPUTDIR="./output"
+INPUTFILE="./ping.destinations"
+PINGCOUNTS="-c 1"
+PINGOPTS="-n -D"
 
-for p in (ping.destinations)
+while read PINGDST 
 do
-    ping -c 1 "${p}"
-done
+	ping $PINGCOUNTS $PINGOPTS $PINGDST | while read PONG
+	do echo $(date +%Y-%m-%d_%H:%M:%S) $PONG >> $OUTPUTDIR/$PINGDST.log
+	done
+done < $INPUTFILE
