@@ -4,6 +4,8 @@ INPUTFILE="./ping.destinations"
 PINGCOUNTS="-c 1"
 PINGOPTS="-n -D"
 
+mkdir -p $OUTPUTDIR
+
 while read PINGDST 
 do
 	ping $PINGCOUNTS $PINGOPTS $PINGDST | while read PONG
