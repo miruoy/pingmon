@@ -2,5 +2,5 @@
 
 for p in (ping.destinations)
 do
-    echo "${p}"
+    ping -c 1 "${p}"
 done
