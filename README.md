@@ -1,6 +1,6 @@
 # pingmon
 Simple ping monitoring tool
 * Set ICMP monitor hosts in the ping.destinations file
-* Seperate output for all monitors will be written raw with addes timestamps to their respective files
-* Use watch -n 2 to run continously
-* Use grep time= output/somenode.log for sorting output quickly
+* Seperate output for all monitors will be written raw and appended by a timestamps to their respective files in $OUTPUTDIR
+* Use watch to run indefinetly. Make sure to tune watch interval to the amount of hosts and round-trip times. Use tail to monitor live logs
+* Use grep/sort/cat for sorting output quickly
