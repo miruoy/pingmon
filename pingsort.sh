@@ -1,3 +1,3 @@
 #!/bin/bash
 
-grep "time=... " $1 | sort -k 2,5 
+grep "time=... " $1 |sed s/"time="/"time= "/ |sed s/".log:"/".log: "/ |sort -k 2
